@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
     <persistence-unit name="ProyectoFinalPU" transaction-type="RESOURCE_LOCAL">
-        <class>com.proyectofinal.model.Producto</class>
+        <class>org.example.model.Producto</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
