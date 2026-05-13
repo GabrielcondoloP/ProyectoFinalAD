@@ -80,7 +80,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
         panelBuscador.add(btnBuscar);
         panelTabla.add(panelBuscador, BorderLayout.NORTH);
 
-        // 2. Tabla básica sin clases anónimas complejas
+        // 2. Tabla básica
         String[] columnas = {"ID", "Nombre", "Descripción", "Precio", "Stock"};
         modeloTabla = new DefaultTableModel(columnas, 0);
         tablaProductos = new JTable(modeloTabla);
@@ -88,13 +88,13 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 
         add(panelTabla, BorderLayout.CENTER);
 
-        // 3. Asignamos el "escuchador" a los botones
+        // 3. Asignamos el "listener" a los botones
         btnGuardar.addActionListener(this);
         btnLimpiar.addActionListener(this);
         btnEliminar.addActionListener(this);
         btnBuscar.addActionListener(this);
 
-        // Evento clásico para detectar clics en la tabla
+        // Evento para detectar clics en la tabla
         tablaProductos.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -111,7 +111,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
         });
     }
 
-    // 4. El clásico metodo gigante con if-else para los botones
+    // 4. Metodo gigante con if-else para los botones
     @Override
     public void actionPerformed(ActionEvent e) {
 
